@@ -33,6 +33,7 @@ Clone the repository and copy the `useFetch.ts` file into your project:
 
 ```bash
 git clone https://github.com/your-username/use-fetch-hook.git
+```
 Then, copy the useFetch.ts file into your project’s source folder.
 
 2. Direct Copy
@@ -41,8 +42,7 @@ Alternatively, you can simply copy the code from the useFetch.ts file directly i
 Usage
 Below is an example of how to use the useFetch hook in a React component:
 
-tsx
-Copy
+```bash
 import React from "react";
 import useFetch from "./useFetch"; // Adjust the path based on where you placed the file
 
@@ -69,6 +69,8 @@ const UserComponent = () => {
 };
 
 export default UserComponent;
+```
+
 Configuration Options
 The hook accepts an optional configuration object as its third parameter to customize its behavior:
 
@@ -82,14 +84,14 @@ timeout (number):
 Timeout duration in milliseconds before aborting the request. Default is 5000 ms.
 
 Example with custom configuration:
-
-tsx
-Copy
+```bash
 const { data, error, loading } = useFetch<UserData>(
   "https://api.example.com/user",
   {},
   { cache: true, retries: 5, timeout: 7000 }
 );
+```
+
 Why useFetch?
 Creating a custom useFetch hook, instead of using generic fetch calls directly in components, offers several advantages:
 
